@@ -12,3 +12,7 @@ If you want a starter project, go over to https://github.com/roboncode/vue-app-s
 
     npm i -g vue-cli
     vue init roboncode/vue-app-starter
+
+#### Contributors welcomed!
+
+If you would like to make a contribution to this repo, please make a pull request.
