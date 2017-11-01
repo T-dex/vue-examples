@@ -5,43 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Demo</title>
+    <title>Vue Examples - Event modifiers</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 
     <script src="../assets/js/vue.js"></script>
-    <script src="../assets/js/http-vue-loader.js"></script>
-    <script src="../assets/js/vue-router.js"></script>
-    <script src="../assets/js/axios.js"></script>
-    <script src="../assets/js/vuex.js"></script>
 
 </head>
 
 <body>
-    <div id="app">
-        <div @click="alert(123)">
-            <h1>Value: {{value}}</h1>
+    <div id="app" @click="alert()">
+        <h1>Value: {{value}}</h1>
 
+        <div class="container">
             <button @click="value++">Inc</button>
             <button @click.stop="value++">Inc (stop propagation)</button>
             <button @click.stop.once="value++">Inc (once)</button>
-            <div @click.stop>
-                <input @keyup.13="value++">
-            </div>
+        </div>
+
+        <div @click.stop>
+            <input @keyup.13="value++">
         </div>
     </div>
 
     <script>
         let app = new Vue({
             el: '#app',
-            data: () => {
+            data: function() {
                 return {
                     value: 0
                 }
             },
             methods: {
                 alert: function () {
-                    alert('You clicked me');
+                    alert('You clicked on the app');
                 }
             }
         });

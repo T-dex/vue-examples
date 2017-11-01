@@ -5,31 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Demo</title>
+    <title>Vue Examples - Transition animations</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
-        .fade-enter-active,
-        .fade-leave-active {
+        .fade-enter-active, .fade-leave-active {
             transition: opacity .5s
         }
-
-        .fade-enter,
-        .fade-leave-to {
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
             opacity: 0
         }
     </style>
 
     <script src="../assets/js/vue.js"></script>
-    <script src="../assets/js/http-vue-loader.js"></script>
-    <script src="../assets/js/vue-router.js"></script>
-    <script src="../assets/js/axios.js"></script>
-    <script src="../assets/js/vuex.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <button v-on:click="show = !show">
+        <button @click="show = !show">
             Toggle
         </button>
         <transition name="fade">
@@ -40,10 +33,8 @@
     <script>
         let app = new Vue({
             el: '#app',
-            data: function () {
-                return {
-                    show: true
-                }
+            data: {
+                show: true
             }
         });
     </script>

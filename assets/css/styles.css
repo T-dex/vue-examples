@@ -8,6 +8,7 @@ html, body {
 
 body {
     padding: 25px;
+    background: #F5F5F5;
 }
 
 h1 {
@@ -16,22 +17,50 @@ h1 {
 }
 
 #app {
-    border: 3px solid orange;
-    padding: 15px;
-    margin-bottom: 20px;
+    position: relative;
+    border: 2px solid #2196F3;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 3px;
+    background: white;
+}
+
+#app::after {
+    content: 'Vue Application';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2px 5px;
+    font-size: 11px;
+    border-radius: 2px;
+}
+
+.container {
+    padding: 15px 0;
+    font-size: 24px;
 }
 
 .box {
     padding: 25px;
     margin: 10px 0;
-    border: 3px solid blue;
+    border: 3px solid #4CAF50;
 }
 
 button {
     padding: 10px 15px;
     background: #f3f3f3;
-    color:#666;
+    color: #666;
     font-size: 13px;
     border: 1px solid #999;
     border-radius: 3px;
+}
+
+input {
+    padding: 8px;
+}
+
+input[type=number] {
+    width: 64px;
 }

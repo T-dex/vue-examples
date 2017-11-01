@@ -5,26 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Demo</title>
+    <title>Vue Examples - Component global registration</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 
     <script src="../assets/js/vue.js"></script>
     <script src="../assets/js/http-vue-loader.js"></script>
-    <script src="../assets/js/vue-router.js"></script>
-    <script src="../assets/js/axios.js"></script>
-    <script src="../assets/js/vuex.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <countdown></countdown>
+        <hello></hello>
+        <hi></hi>
     </div>
 
     <script>
-        const countdown = httpVueLoader('./components/countdown.vue');
+        const hello = httpVueLoader('./components/hello.vue');
 
-        Vue.component('countdown', countdown);
+        // You can register it with the same name as the component
+        Vue.component('hello', hello);
+
+        // You can register it with a different name as the component
+        Vue.component('hi', hello);
 
         let app = new Vue({
             el: '#app'

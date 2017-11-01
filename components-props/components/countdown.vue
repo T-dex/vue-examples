@@ -7,7 +7,7 @@ let timer;
 
 module.exports = {
   props: ["time", "autoplay"],
-  data: () => {
+  data: function() {
     return {
       timeRemaining: 0
     };

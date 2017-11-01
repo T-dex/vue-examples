@@ -5,15 +5,15 @@
         <button class="btn btn-default" @click="markAllDone()">Mark all done</button>
         <button class="btn btn-default" @click="clear()">Clear done</button>
       </div>
-      <ul>
-          <task v-for="item in list" :key="item.label" :value="item" @remove="remove(item)"></task>
-      </ul>
+      <transition-group name="list" tag="ul">
+          <todo-item v-for="item in list" :key="item.label" :value="item" @remove="remove(item)"></todo-item>
+      </transition-group>
   </div>
 </template>
 
 <script>
 module.exports = {
-  components: { task: httpVueLoader("./task.vue") },
+  components: { TodoItem: httpVueLoader("./TodoItem.vue") },
   data: function() {
     return {
       label: "",
@@ -21,7 +21,7 @@ module.exports = {
     };
   },
   created: function() {
-    var list = localStorage.getItem("todos");
+    let list = localStorage.getItem("todos");
     if (list) {
       this.list = JSON.parse(list);
     }
@@ -46,7 +46,7 @@ module.exports = {
       }
     },
     clear: function() {
-      var i = this.list.length;
+      let i = this.list.length;
       while (i--) {
         if (this.list[i].done) {
           this.list.splice(i, 1);
@@ -135,4 +135,6 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 </style>
+

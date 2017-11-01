@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Demo</title>
+    <title>Vue Examples</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <style>
         #app {
@@ -14,22 +14,37 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        .list-complete-item {
+            transition: all 1s;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .list-complete-enter, .list-complete-leave-to
+            /* .list-complete-leave-active below version 2.1.8 */ {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .list-complete-leave-active {
+            position: absolute;
+        }
     </style>
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <todo></todo>
+        <todo-list></todo-list>
     </div>
 
-    <script src="../assets/js/vue.js"></script>
-    <script src="../assets/js/http-vue-loader.js"></script>
     <script>
-        const todo = httpVueLoader("./components/todo/todo.vue");
+        const TodoList = httpVueLoader("./components/todo/TodoList.vue");
         let app = new Vue({
             el: '#app',
             components: {
-                todo: todo
+                TodoList
             }
         });
     </script>

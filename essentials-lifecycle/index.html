@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Examples</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+
+</head>
+
+<body>
+<a href="https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram">Understanding Vue.js Lifecycle Hooks</a>
+
+<div id="app">
+    <div class="container">
+        <button @click="showWidget = !showWidget">Toggle Widget</button>
+        <button @click="showKeepAlive = !showKeepAlive">Toggle Keep-Alive Widget</button>
+    </div>
+
+    <lifecycle name="widget" v-if="showWidget" ref="lifecycle"></lifecycle>
+
+
+    <keep-alive>
+        <lifecycle name="keep-alive-widget" v-if="showKeepAlive" ref="lifecycle"></lifecycle>
+    </keep-alive>
+
+</div>
+
+<script>
+    let app = new Vue({
+        el: '#app',
+        components: {
+            lifecycle: httpVueLoader('./components/lifecycle.vue')
+        },
+        data: function () {
+            return {
+                showWidget: false,
+                showKeepAlive: false
+            }
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Examples - Data</title>
+    <title>Vue Examples</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
 
@@ -13,20 +13,12 @@
 </head>
 
 <body>
-    <div id="app">
-        <h1>{{message}}</h1>
-    </div>
-
-    <button onclick="app.message = 'Goodbye'">Say Goodbye</button>
+    <div id="app"></div>
 
     <script>
         let app = new Vue({
             el: '#app',
-            data: function() {
-                return {
-                    message: "Hello, world!"
-                }
-            }
+            template: "<div>Hello, world!</div>"
         });
     </script>
 </body>

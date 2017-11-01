@@ -3,8 +3,7 @@
 </template>
 
 <style scoped>
-  .container {
-    background: blue;
-    color: white;
-  }
+    .container {
+        background: #BBDEFB;
+    }
 </style>

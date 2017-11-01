@@ -6,7 +6,7 @@
 let timer;
 
 module.exports = {
-  data: () => {
+  data: function() {
     return {
       timeRemaining: 0
     };

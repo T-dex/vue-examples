@@ -16,7 +16,7 @@ module.exports = {
       default: false
     }
   },
-  data: () => {
+  data: function() {
     return {
       timeRemaining: 0
     };

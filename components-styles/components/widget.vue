@@ -4,7 +4,6 @@
 
 <style>
   .container {
-    background: blue;
-    color: white;
+    background: #BBDEFB;
   }
 </style>
