@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
+    <script src="../assets/js/vue-router.js"></script>
+    <script src="../assets/js/axios.js"></script>
+    <script src="../assets/js/vuex.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <widget></widget>
+    </div>
+
+    <div class="container">
+        Hello, word!
+    </div>
+
+    <script>
+        const widget = httpVueLoader('./components/widget.vue');
+
+        let app = new Vue({
+            el: '#app',
+            components: {
+                widget
+            }
+        });
+    </script>
+</body>
+
+</html>

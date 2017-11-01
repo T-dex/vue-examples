@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
+    <script src="../assets/js/vue-router.js"></script>
+    <script src="../assets/js/axios.js"></script>
+    <script src="../assets/js/vuex.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="box">
+            <countdown ref="counterA" :time="10" :autoplay="false"></countdown>
+            <button @click="start('counterA')">Start</button>
+            <button @click="stop('counterA')">Stop</button>
+            <button @click="reset('counterA')">Reset</button>
+        </div>
+
+        <div class="box">
+            <countdown ref="counterB" :time="5" :autoplay="false"></countdown>
+            <button @click="start('counterB')">Start</button>
+            <button @click="stop('counterB')">Stop</button>
+            <button @click="reset('counterB')">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const countdown = httpVueLoader('./components/countdown.vue');
+
+        let app = new Vue({
+            el: '#app',
+            components: {
+                countdown
+            },
+            methods: {
+                start(name) {
+                    this.$refs[name].start();
+                },
+                stop(name) {
+                    this.$refs[name].stop();
+                },
+                reset(name) {
+                    this.$refs[name].reset();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

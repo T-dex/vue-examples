@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
+    <script src="../assets/js/vue-router.js"></script>
+    <script src="../assets/js/axios.js"></script>
+    <script src="../assets/js/vuex.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="box">
+            <div v-demo.a.b="value"></div>
+        </div>
+        <div class="box">
+            <div v-visible="value">Hello, world</div>
+            <div v-visible.display="value">Hello, world</div>
+            <div v-visible.opacity="value">Hello, world</div>
+        </div>
+
+        <button @click="value = !value">Toggle Value</button>
+    </div>
+
+    <script>
+
+        (function () {
+            function update(el, binding, vnode) {
+                var s = JSON.stringify
+                el.innerHTML =
+                    'name: ' + s(binding.name) + '<br>' +
+                    'value: ' + s(binding.value) + '<br>' +
+                    'expression: ' + s(binding.expression) + '<br>' +
+                    'argument: ' + s(binding.arg) + '<br>' +
+                    'modifiers: ' + s(binding.modifiers) + '<br>' +
+                    'vnode keys: ' + Object.keys(vnode).join(', ')
+            }
+
+            Vue.directive('demo', {
+                bind: update,
+                update: update
+            });
+        }());
+
+        (function () {
+            function update(el, binding, vnode) {
+                var mod = binding.modifiers;
+                if (mod.display) {
+                    el.style.display = binding.value ? "" : 'none';
+                } else if (mod.opacity) {
+                    el.style.opacity = binding.value ? "" : 0;
+                } else {
+                    el.style.visibility = binding.value ? "" : "hidden";
+                }
+            }
+
+            Vue.directive('visible', {
+                bind: update,
+                update: update
+            });
+        }());
+
+
+        let app = new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    value: true
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

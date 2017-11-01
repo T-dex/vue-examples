@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
+    <script src="../assets/js/vue-router.js"></script>
+    <script src="../assets/js/axios.js"></script>
+    <script src="../assets/js/vuex.js"></script>
+
+    <style>
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            background: #eeeeee;
+            color: #666666;
+        }
+
+        a.router-link-exact-active {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/home">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/support">Support</router-link>
+        <router-view class="box"></router-view>
+    </div>
+
+    <script>
+        const router = new VueRouter({
+            routes: [
+                {
+                    name: "home",
+                    path: "/home",
+                    component: httpVueLoader('./pages/home.vue')
+                },
+                {
+                    name: "about",
+                    path: "/about",
+                    component: httpVueLoader('./pages/about.vue')
+                },
+                {
+                    name: "support",
+                    path: "/support",
+                    component: httpVueLoader('./pages/support.vue')
+                },
+                {
+                    path: '*',
+                    redirect: "/home"
+                }
+            ]
+        });
+
+        let app = new Vue({
+            el: '#app',
+            router
+        });
+    </script>
+</body>
+
+</html>

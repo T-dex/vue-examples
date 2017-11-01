@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <script src="../assets/js/vue.js"></script>
+    <script src="../assets/js/http-vue-loader.js"></script>
+    <script src="../assets/js/vue-router.js"></script>
+    <script src="../assets/js/axios.js"></script>
+    <script src="../assets/js/vuex.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <input type="number" v-model="valA"> +
+            <input type="number" v-model="valB"> = {{result}}
+        </div>
+
+        <!-- Example of using @click event handler -->
+        <button @click="result = Number(valA) + Number(valB)">Sum (Inline)</button>
+        <button @click="sum(valA, valB)">Sum (Method)</button>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: () => {
+                return {
+                    valA: 0,
+                    valB: 0,
+                    result: 0
+                }
+            },
+            methods: {
+                sum: function (valA, valB) {
+                    this.result = Number(valA) + Number(valB);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
