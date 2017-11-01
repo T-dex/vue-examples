@@ -40,8 +40,8 @@
                 }
             },
             watch: {
-                result: function (newVal) {
-                    this.logs.push("The result was changed to..." +  newVal);
+                result: function (newVal, oldVal) {
+                    this.logs.push("The result was changed to..." +  newVal + ', the old value was ' + oldVal);
                 }
             }
         });

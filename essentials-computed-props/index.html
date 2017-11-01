@@ -19,6 +19,9 @@
             <input type="number" v-model="valA"> +
             <input type="number" v-model="valB"> {{result}}
         </div>
+        <p>This will not invoke the computed property</p>
+        <!-- This will not invoke the computed property -->
+        <input type="number" v-model="valC">
     </div>
 
     <script>
@@ -27,11 +30,13 @@
             data: function() {
                 return {
                     valA: 0,
-                    valB: 0
+                    valB: 0,
+                    valC: 0
                 }
             },
             computed: {
                 result: function () {
+                    console.log('#result called', this.valA, this.valB);
                     return "equals " + (Number(this.valA) + Number(this.valB));
                 }
             }

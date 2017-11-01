@@ -49,7 +49,7 @@
 
         (function () {
             function update(el, binding, vnode) {
-                var mod = binding.modifiers;
+                let mod = binding.modifiers;
                 if (mod.display) {
                     el.style.display = binding.value ? "" : 'none';
                 } else if (mod.opacity) {

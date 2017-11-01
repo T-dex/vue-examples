@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div id="app" :class="valid">
+    <div id="app" :class="classes">
         <div class="container">
             <input type="number" v-model="val">
         </div>
@@ -41,7 +41,7 @@
                 }
             },
             computed: {
-                valid: function () {
+                classes: function () {
                     return this.val > 5 ? "valid" : "invalid";
                 }
             }

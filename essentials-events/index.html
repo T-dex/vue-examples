@@ -20,8 +20,10 @@
             <input type="number" v-model="valB"> = {{result}}
         </div>
 
-        <!-- Example of using @click event handler -->
+        <!-- Example of using @click with interpolation -->
         <button @click="result = Number(valA) + Number(valB)">Sum (Using interpolation)</button>
+
+        <!-- Example of using @click by invoking method -->
         <button @click="calculate(valA, valB)">Sum (Invoke method)</button>
     </div>
 

@@ -16,7 +16,7 @@
     <div id="app">
         <input v-model="search">
         <ul>
-            <li v-for="item in filteredList">{{item.name}}</li>
+            <li v-for="item in filteredList" :key="item.name">{{item.name}}</li>
         </ul>
     </div>
 
@@ -40,6 +40,7 @@
             },
             computed: {
                 filteredList: function() {
+                    console.log('#filteredList called', this.search);
                     return this.list.filter((item) => {
                         return item.name.toLowerCase().indexOf(this.search.toLowerCase()) !== -1;
                     });

@@ -14,10 +14,11 @@
 
 <body>
     <div id="app">
+        <button @click="toggleShow()">Toggle Display</button>
+
         <!-- v-show is a built-in directive in Vue -->
         <h1 v-show="show">{{message}}</h1>
         
-        <button @click="toggleShow()">Toggle Display</button>
     </div>
 
 
