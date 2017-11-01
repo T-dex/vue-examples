@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Vincent Porter",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg"
+    },
+    {
+        "id": 2,
+        "status": "offline",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Aiden Chavez",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_02.jpg"
+    },
+    {
+        "id": 3,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Mike Thomas",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_03.jpg"
+    },
+    {
+        "id": 4,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Erica Hughes",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_04.jpg"
+    },
+    {
+        "id": 5,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Ginger Johnston",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_05.jpg"
+    },
+    {
+        "id": 6,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Tracy Carpenter",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_06.jpg"
+    },
+    {
+        "id": 7,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Christian Kelly",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_07.jpg"
+    },
+    {
+        "id": 8,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Monica Ward",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_08.jpg"
+    },
+    {
+        "id": 9,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Dean Henry",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_09.jpg"
+    },
+    {
+        "id": 10,
+        "status": "online",
+        "lastActivity": "2017-09-07T16:27:00.808Z",
+        "name": "Peyton Mckinney",
+        "avatar": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_10.jpg"
+    }
+]

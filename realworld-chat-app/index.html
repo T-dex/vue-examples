@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- <div id="app" class="container clearfix"> -->
+<div id="app" class="container">
+  <router-view flex></router-view>
+</div>
+
+<!-- Vue.js -->
+<script src="https://unpkg.com/vue"></script>
+
+<!-- Vue Loader (for prototyping) -->
+<script src="https://unpkg.com/http-vue-loader"></script>
+
+<!-- Vuex (Store for state management) -->
+<script src="https://unpkg.com/vuex@2.4.0/dist/vuex.js"></script>
+
+<!-- Axios (for connecting to REST web services)-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<!-- Vue Router (for navigating between pages) -->
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<!-- Vuex Router Sync (convenient helper to access params in store)  -->
+<script src="script/vuex-router-sync.js"></script>
+
+<!-- Chat Application -->
+<script src="script/helpers.js"></script>
+<script src="script/chat.js"></script>
+</body>
+</html>

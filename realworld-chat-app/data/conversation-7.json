@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Olia",
+        "created": "2017-09-07T16:35:14.773Z",
+        "text": "Hi Vincent, how are you? How is the project coming along?"
+    },
+    {
+        "id": "2",
+        "name": "Vincent",
+        "created": "2017-09-07T16:35:14.773Z",
+        "text": "Are we meeting today? Project has been already finished and I have results to show you."
+    },
+    {
+        "id": "3",
+        "name": "Olia",
+        "created": "2017-09-07T16:35:14.773Z",
+        "text": "Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?"
+    },
+    {
+        "id": "4",
+        "name": "Vincent",
+        "created": "2017-09-07T16:35:14.773Z",
+        "text": "Actually everything was fine. I'm very excited to show this to our team."
+    }
+]
